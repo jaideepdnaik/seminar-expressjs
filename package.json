@@ -1,0 +1,15 @@
+{
+  "name": "seminar-expressjs",
+  "version": "1.0.0",
+  "description": "This is my demo of my presentation on the topic Express JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
