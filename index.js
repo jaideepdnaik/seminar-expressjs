@@ -18,3 +18,7 @@ app.get('/home', (req, res) => {
 app.get('/help', (req, res) => {
     res.send('You\'ve reached the help page');
 });
+
+app.get('*', (req, res) => {
+    res.send('This path doesn\'t exist.');
+});
