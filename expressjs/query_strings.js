@@ -13,5 +13,6 @@ app.get('/', (req, res) => {
 
 app.get("/search", (req, res) => {
     console.log(req.query);
-    res.send(`Welcome ${req.query.color} ${req.query.fruit} `);
+    res.send(`Data sent in query is ${req.query.data} `);
+    // res.send(`Welcome ${req.query.color} ${req.query.fruit} `);
 });
