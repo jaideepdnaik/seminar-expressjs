@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 const ExpressError = require("./ExpressError");
 
+//Creating a utility middleware.
+// app.use((req, res, next) => {
+//     const timestamp = 1724819677824; //the number of milliseconds since January 1, 1970, 00:00:00 UTC
+//     req.time = new Date(timestamp);
+//     console.log(req.method, req.hostname, req.path, req.time.toLocaleString());
+//     next();
+// });
 
 app.use((req, res) => {
     console.log("Hi, I'm middleware");
