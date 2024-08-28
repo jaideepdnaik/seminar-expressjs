@@ -3,27 +3,27 @@ const app = express();
 const ExpressError = require("./ExpressError");
 
 
+app.use((req, res) => {
+    console.log("Hi, I'm middleware");
+    res.send("Middleware finished.");
+});
+
 // app.use((req, res, next) => {
 //     console.log("Hi, I'm middleware");
 //     next();
 // });
 
-app.use((req, res, next) => {
-    console.log(req);
-    next();
-});
+// const checkToken = (req, res, next) => {
+//     let { token } = req.query;
+//     if (token === "giveaccess") {
+//         next();
+//     }
+//     throw new Error(401, "ACCESS DENIED");
+// };
 
-const checkToken = (req, res, next) => {
-    let { token } = req.query;
-    if (token === "giveaccess") {
-        next();
-    }
-    throw new Error(401, "ACCESS DENIED");
-};
-
-app.get("/api", checkToken, (req, res) => {
-    res.send("data");
-});
+// app.get("/api", checkToken, (req, res) => {
+//     res.send("data");
+// });
 
 app.get("/", (req, res) => {
     res.send("Hi, I'm the root");
