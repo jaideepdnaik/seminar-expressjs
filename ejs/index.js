@@ -8,6 +8,7 @@ app.set("view engine", "ejs");
 // app.set("views", path.join(__dirname, "/views"));
 
 app.get("/", (req, res) => {
+    // res.send("Home page");
     res.render("home.ejs");
 });
 
