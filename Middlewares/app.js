@@ -10,26 +10,27 @@ const ExpressError = require("./ExpressError");
 //     next();
 // });
 
-app.use((req, res) => {
-    console.log("Hi, I'm middleware");
-    res.send("Middleware finished.");
-});
+// app.use((req, res) => {
+//     console.log("Hi, I'm middleware");
+//     res.send("Middleware finished.");
+// });
 
 // app.use((req, res, next) => {
 //     console.log("Hi, I'm middleware");
 //     next();
 // });
 
+//Creating a middleware for an API that checks if the access token was passed in the query string or not.
 // const checkToken = (req, res, next) => {
 //     let { token } = req.query;
 //     if (token === "giveaccess") {
 //         next();
 //     }
-//     throw new Error(401, "ACCESS DENIED");
+//     res.send("ACCESS DENIED");
 // };
 
 // app.get("/api", checkToken, (req, res) => {
-//     res.send("data");
+//     res.send("Hey there. I'm the data.");
 // });
 
 app.get("/", (req, res) => {
@@ -44,10 +45,11 @@ app.get("/err", (req, res) => {
     abcd = abcd;
 });
 
-app.use((err, req, res, next) => {
-    let { status, message } = err;
-    res.status(status).send(message);
-});
+//Error handling middlewares
+// app.use((err, req, res, next) => {
+//     let { status, message } = err;
+//     res.status(status).send(message);
+// });
 
 // app.use((req, res) => {
 //     res.status(404).send("Page not found");
