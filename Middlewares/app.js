@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const ExpressError = require("./ExpressError");
 
 //Creating a utility middleware.
 // app.use((req, res, next) => {
