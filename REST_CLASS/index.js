@@ -19,14 +19,24 @@ let posts = [{
     },
     {
         id: uuidv4(),
-        username: "Travis Scott",
-        content: "Congrats, You found me!"
+        username: "Jaideep",
+        content: "APIs enable communication between frontend and backend services efficiently."
     },
     {
         id: uuidv4(),
-        username: "Post Malone",
-        content: "I like you happier."
+        username: "Nishanth",
+        content: "Database management is crucial for storing and retrieving application data."
     },
+    {
+        id: uuidv4(),
+        username: "Manish",
+        content: "Authentication ensures secure access to protected backend resources."
+    },
+    {
+        id: uuidv4(),
+        username: "Sam",
+        content: "Server-side logic handles business operations and processes user requests."
+    }
 ];
 
 //Home Route
