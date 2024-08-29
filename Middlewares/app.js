@@ -14,10 +14,10 @@ const app = express();
 //     res.send("Middleware finished.");
 // });
 
-// app.use((req, res, next) => {
-//     console.log("Hi, I'm middleware");
-//     next();
-// });
+app.use((req, res, next) => {
+    console.log("Hi, I'm middleware");
+    next();
+});
 
 //Creating a middleware for an API that checks if the access token was passed in the query string or not.
 // const checkToken = (req, res, next) => {
@@ -43,16 +43,6 @@ app.get("/random", (req, res) => {
 app.get("/err", (req, res) => {
     abcd = abcd;
 });
-
-//Error handling middlewares
-// app.use((err, req, res, next) => {
-//     let { status, message } = err;
-//     res.status(status).send(message);
-// });
-
-// app.use((req, res) => {
-//     res.status(404).send("Page not found");
-// });
 
 app.listen(8080, () => {
     console.log(`Server is running at http://localhost:8080`);
