@@ -3,7 +3,7 @@ const app = express();
 
 //Creating a utility middleware.
 // app.use((req, res, next) => {
-//     const timestamp = 1724819677824; //the number of milliseconds since January 1, 1970, 00:00:00 UTC
+//     const timestamp = 1724897781000; //the number of milliseconds since January 1, 1970, 00:00:00 UTC
 //     req.time = new Date(timestamp);
 //     console.log(req.method, req.hostname, req.path, req.time.toLocaleString());
 //     next();
@@ -14,10 +14,10 @@ const app = express();
 //     res.send("Middleware finished.");
 // });
 
-app.use((req, res, next) => {
-    console.log("Hi, I'm middleware");
-    next();
-});
+// app.use((req, res, next) => {
+//     console.log("Hi, I'm middleware");
+//     next();
+// });
 
 //Creating a middleware for an API that checks if the access token was passed in the query string or not.
 // const checkToken = (req, res, next) => {
